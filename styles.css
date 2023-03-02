@@ -18,7 +18,7 @@ body.dark {
 
 .calculator {
     width: 400px;
-    height: 500px;
+    height: 470px;
 }
 
 
@@ -40,8 +40,9 @@ body.dark {
 .light .numbers,
 .light .heading,
 .light .switch-container p,
-.light .screen
-.light button {
+.light .screen,
+.light button,
+.dark .red-button {
     color: hsl(60, 10%, 19%);
 }
 
@@ -84,6 +85,7 @@ body.dark {
     position: relative;
     box-shadow: inset 6px 0 8px hsl(6, 70%, 34%);
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .light .flicker {
@@ -167,8 +169,13 @@ button {
     height: 30px;
     border-radius: 5px;
     margin: 10px;
+    font-weight: bold;
     box-shadow: 0 2px 0 hsl(28, 16%, 65%);
     cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 100%);
 }
 
 .light button {
@@ -176,9 +183,18 @@ button {
     box-shadow: 0 2px 0 hsl(35, 11%, 61%);
 }
 
+.light button:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+
+
 .dark button {
     background-color: hsl(268, 47%, 21%);
     box-shadow: 0 2px 0 hsl(290, 70%, 36%);
+}
+
+.dark button:hover {
+    background-color: hsl(268, 41%, 42%);
 }
 
 .blue-button {
@@ -187,14 +203,32 @@ button {
     color: hsl(0, 0%, 100%);
 }
 
+.blue-button:hover {
+    background-color: hsl(223, 41%, 64%);
+}
+
 .light .blue-button {
     background-color: hsl(185, 42%, 37%);
     box-shadow: 0 2px 0 hsl(185, 58%, 25%);
 }
 
+.light .blue-button:hover {
+    background-color: hsl(185, 35%, 55%);
+}
+
+.light .blue-button,
+.dark .blue-button,
+.light .red-button {
+    color: hsl(0, 0%, 100%);
+}
+
 .dark .blue-button {
     background-color: hsl(281, 89%, 26%);
     box-shadow: 0 2px 0 hsl(285, 91%, 52%);
+}
+
+.dark .blue-button:hover {
+    background-color: hsl(281, 83%, 45%);;
 }
 
 .big-buttons button {
@@ -207,9 +241,17 @@ button {
     color: hsl(0, 0%, 100%);
 }
 
+.red-button:hover {
+    background-color: hsl(6, 57%, 60%);
+}
+
 .light .red-button {
     background-color: hsl(25, 98%, 40%);
     box-shadow: 0 2px 0 hsl(25, 99%, 27%);
+}
+
+.light .red-button:hover {
+    background-color: hsl(25, 57%, 58%);
 }
 
 .dark .red-button {
@@ -217,3 +259,77 @@ button {
     box-shadow: 0 2px 0 hsl(177, 92%, 70%);
 }
 
+.dark .red-button:hover {
+    background-color: hsl(176, 100%, 50%);
+}
+
+@media (max-width: 400px) {
+    .numbers {
+        width: 48px;
+        font-size: 0.6rem;
+    }
+
+    .flicker {
+        width: 15px;
+        height: 15px;
+        left: 2px;
+        top: 2px;
+    }
+
+    .calculator {
+        width: 300px;
+        height: 450px;
+    }
+
+    .light .flicker {
+        transform: translateX(15px);
+    }
+
+    .dark .flicker {
+        transform: translateX(30px);
+    }
+
+    .switch {
+        width: 50px;
+        height: 20px;
+    }
+
+    .switch-container {
+        width: 100px;
+    }
+
+    .switch-container p {
+        margin: 3px 0;
+        font-size: 0.7rem;
+    }
+
+    .heading {
+        margin: -13px 2px;
+        font-size: 2rem;
+    }
+
+    .screen {
+        width: 280px;
+        font-size: 40px;
+    }
+
+    .buttons {
+        width: 250px;
+    }
+
+    button {
+        width: 48.2px;
+        height: 50px;
+        font-size: 19px;
+        margin: 7px;
+        
+    }
+
+    .operations {
+        width: 300px;
+    }
+
+    .big-buttons button {
+        width: 106px;
+    }
+}
