@@ -8,6 +8,14 @@ body {
     font-weight: 700;
 }
 
+body.light {
+    background-color: hsl(0, 0%, 90%);
+}
+
+body.dark {
+    background-color: hsl(268, 75%, 9%);
+}
+
 .calculator {
     width: 400px;
     height: 500px;
@@ -29,6 +37,22 @@ body {
     font-size: 0.8rem;
 }
 
+.light .numbers,
+.light .heading,
+.light .switch-container p,
+.light .screen
+.light button {
+    color: hsl(60, 10%, 19%);
+}
+
+.dark .numbers,
+.dark .heading,
+.dark .switch-container p,
+.dark .screen,
+.dark button {
+    color: hsl(52, 100%, 62%);
+}
+
 .heading {
     margin: -5px 0;
     color: hsl(0, 0%, 100%);
@@ -42,6 +66,14 @@ body {
     background-color: hsl(223, 31%, 20%);
 }
 
+.light .switch {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.dark .switch {
+    background-color: hsl(268, 71%, 12%);
+}
+
 .flicker {
     width: 20px;
     height: 20px;
@@ -51,6 +83,19 @@ body {
     background-color: hsl(6, 63%, 50%);
     position: relative;
     box-shadow: inset 6px 0 8px hsl(6, 70%, 34%);
+    transition: 0.3s;
+}
+
+.light .flicker {
+    transform: translateX(27px);
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: inset 6px 0 8px hsl(25, 99%, 27%);
+  }
+
+.dark .flicker {
+    transform: translateX(54px);
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: inset 4px 3px 8px  hsl(177, 92%, 70%);
 }
 
 .calc-heading {
@@ -81,20 +126,36 @@ body {
     padding: 10px;
 }
 
+.light .screen {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.dark .screen {
+    background-color: hsl(268, 71%, 12%);
+}
+
 .buttons {
-    margin-top: 10px;
+    margin: 18px 0;
     width: 345px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .operations {
-    margin-top: 16px;
+    margin: 16px 0;
     background-color: hsl(223, 31%, 20%);
     width: 400px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
+}
+
+.light .operations {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.dark .operations {
+    background-color: hsl(268, 71%, 12%);
 }
 
 button {
@@ -110,10 +171,30 @@ button {
     cursor: pointer;
 }
 
+.light button {
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0 2px 0 hsl(35, 11%, 61%);
+}
+
+.dark button {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0 2px 0 hsl(290, 70%, 36%);
+}
+
 .blue-button {
     background-color: hsl(225, 21%, 49%);
     box-shadow: 0 2px 0 hsl(224, 28%, 35%);
     color: hsl(0, 0%, 100%);
+}
+
+.light .blue-button {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0 2px 0 hsl(185, 58%, 25%);
+}
+
+.dark .blue-button {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 2px 0 hsl(285, 91%, 52%);
 }
 
 .big-buttons button {
@@ -125,3 +206,14 @@ button {
     box-shadow: 0 2px 0 hsl(6, 70%, 34%);
     color: hsl(0, 0%, 100%);
 }
+
+.light .red-button {
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0 2px 0 hsl(25, 99%, 27%);
+}
+
+.dark .red-button {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0 2px 0 hsl(177, 92%, 70%);
+}
+
