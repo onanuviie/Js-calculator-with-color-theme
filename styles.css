@@ -276,6 +276,11 @@ button:hover {
         top: 2px;
     }
 
+    .regulator {
+        display: flex;
+        justify-content: end;
+    }
+
     .calculator {
         width: 300px;
         height: 450px;
